@@ -1,0 +1,150 @@
+{% load static %}
+<section class="section section--tint">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Catalogue</span>
+      <h2>All products</h2>
+      <p class="lead">Filter the range, then send us the items you are interested in for a quotation.</p>
+    </div>
+    <div class="filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="paper">Handmade Paper</button>
+      <button class="filter-btn" data-filter="pashmina">Pashmina</button>
+      <button class="filter-btn" data-filter="statues">Statues</button>
+      <button class="filter-btn" data-filter="herbals">Herbals</button>
+    </div>
+    <div class="grid grid--4">
+      <article class="card product-card reveal" data-category="paper">
+        <div class="card__media">
+          <img src="{% static 'assets/img/p-paper-1.jpg' %}" alt="Lokta Sheet Paper" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <span class="tag">Handmade Paper</span>
+          <h3>Lokta Sheet Paper</h3>
+          <p>Natural, dyed and textured lokta sheets in 20–120 gsm, cut to your size.</p>
+        </div>
+      </article>
+      <article class="card product-card reveal" data-category="paper">
+        <div class="card__media">
+          <img src="{% static 'assets/img/p-paper-2.jpg' %}" alt="Journals &amp; Notebooks" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <span class="tag">Handmade Paper</span>
+          <h3>Journals &amp; Notebooks</h3>
+          <p>Hand-bound notebooks, sketchbooks and guest books with lokta covers.</p>
+        </div>
+      </article>
+      <article class="card product-card reveal" data-category="paper">
+        <div class="card__media">
+          <img src="{% static 'assets/img/p-paper-3.jpg' %}" alt="Printed &amp; Marbled Paper" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <span class="tag">Handmade Paper</span>
+          <h3>Printed &amp; Marbled Paper</h3>
+          <p>Screen-printed, block-printed and marbled decorative sheets.</p>
+        </div>
+      </article>
+      <article class="card product-card reveal" data-category="paper">
+        <div class="card__media">
+          <img src="{% static 'assets/img/p-paper-4.jpg' %}" alt="Gift Wrap, Bags &amp; Boxes" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <span class="tag">Handmade Paper</span>
+          <h3>Gift Wrap, Bags &amp; Boxes</h3>
+          <p>Gift packaging, envelopes, tags and rigid boxes for retail brands.</p>
+        </div>
+      </article>
+      <article class="card product-card reveal" data-category="pashmina">
+        <div class="card__media">
+          <img src="{% static 'assets/img/p-pash-1.jpg' %}" alt="Classic Pashmina Shawl" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <span class="tag">Pashmina</span>
+          <h3>Classic Pashmina Shawl</h3>
+          <p>70x200cm handwoven shawls in 100% Chyangra cashmere.</p>
+        </div>
+      </article>
+      <article class="card product-card reveal" data-category="pashmina">
+        <div class="card__media">
+          <img src="{% static 'assets/img/p-pash-2.jpg' %}" alt="Cashmere &amp; Silk Blend" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <span class="tag">Pashmina</span>
+          <h3>Cashmere &amp; Silk Blend</h3>
+          <p>Lightweight 70/30 cashmere-silk stoles with a soft lustre.</p>
+        </div>
+      </article>
+      <article class="card product-card reveal" data-category="pashmina">
+        <div class="card__media">
+          <img src="{% static 'assets/img/p-pash-3.jpg' %}" alt="Scarves &amp; Wraps" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <span class="tag">Pashmina</span>
+          <h3>Scarves &amp; Wraps</h3>
+          <p>Everyday scarves, ring stoles and travel wraps in seasonal colours.</p>
+        </div>
+      </article>
+      <article class="card product-card reveal" data-category="statues">
+        <div class="card__media">
+          <img src="{% static 'assets/img/p-stat-1.jpg' %}" alt="Buddha Statues" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <span class="tag">Statues</span>
+          <h3>Buddha Statues</h3>
+          <p>Lost-wax cast copper Buddha figures with gold gilding and hand finishing.</p>
+        </div>
+      </article>
+      <article class="card product-card reveal" data-category="statues">
+        <div class="card__media">
+          <img src="{% static 'assets/img/p-stat-2.jpg' %}" alt="Tara &amp; Deity Figures" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <span class="tag">Statues</span>
+          <h3>Tara &amp; Deity Figures</h3>
+          <p>Green Tara, White Tara, Ganesh and Manjushri in multiple heights.</p>
+        </div>
+      </article>
+      <article class="card product-card reveal" data-category="statues">
+        <div class="card__media">
+          <img src="{% static 'assets/img/p-stat-3.jpg' %}" alt="Ritual &amp; Décor Objects" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <span class="tag">Statues</span>
+          <h3>Ritual &amp; Décor Objects</h3>
+          <p>Singing bowls, incense holders, bells and brass décor pieces.</p>
+        </div>
+      </article>
+      <article class="card product-card reveal" data-category="herbals">
+        <div class="card__media">
+          <img src="{% static 'assets/img/p-herb-1.jpg' %}" alt="Himalayan Herbal Teas" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <span class="tag">Herbal Products</span>
+          <h3>Himalayan Herbal Teas</h3>
+          <p>Single-origin and blended teas with tulsi, ginger, chamomile and mint.</p>
+        </div>
+      </article>
+      <article class="card product-card reveal" data-category="herbals">
+        <div class="card__media">
+          <img src="{% static 'assets/img/p-herb-2.jpg' %}" alt="Essential Oils &amp; Balms" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <span class="tag">Herbal Products</span>
+          <h3>Essential Oils &amp; Balms</h3>
+          <p>Cold-pressed and steam-distilled oils, salves and massage balms.</p>
+        </div>
+      </article>
+      <article class="card product-card reveal" data-category="herbals">
+        <div class="card__media">
+          <img src="{% static 'assets/img/p-herb-3.jpg' %}" alt="Incense &amp; Herbal Soaps" loading="lazy" />
+        </div>
+        <div class="card__body">
+          <span class="tag">Herbal Products</span>
+          <h3>Incense &amp; Herbal Soaps</h3>
+          <p>Traditional Himalayan incense and cold-process herbal soaps.</p>
+        </div>
+      </article>
+    </div>
+    <p class="form-note reveal" style="text-align:center;margin-top:28px">Product photographs are indicative. Colours, sizes and finishes are made to order — ask for a shade card or a physical sample.</p>
+  </div>
+</section>

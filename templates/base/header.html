@@ -1,0 +1,25 @@
+{% load static %}
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="{% url 'home' %}" aria-label="Himalayan Foundation home">
+      <img src="{% static 'assets/img/logo.png' %}" alt="Himalayan Foundation logo">
+      <span class="brand__name">Himalayan Network
+        <span class="brand__tag">Handcrafted in Nepal</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="site-nav">
+      <ul class="nav__list">
+        <li><a href="{% url 'home' %}" class="active">Home</a> </li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'products' %}">Products</a></li>
+        <li><a href="{% url 'craft' %}">Our Craft</a></li>
+        <li><a href="{% url 'sustainability' %}">Sustainability</a></li>
+        <li class="nav__cta"><a class="btn" href="#">Enquire Now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

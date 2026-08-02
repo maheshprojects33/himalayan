@@ -1,0 +1,24 @@
+{% load static %}
+
+<section class="section section--tint">
+  <div class="container split split--reverse">
+    <div class="split__media reveal">
+      <img src="{% static 'assets/img/cat-statues.jpg' %}" alt="Hand-finished statues" loading="lazy" />
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Capability</span>
+      <h2>What we can do for your business</h2>
+      <ul class="ticks">
+        <li>Wholesale supply across four product categories</li>
+        <li>Private label and OEM production with your branding</li>
+        <li>Custom colours, sizes, finishes and packaging</li>
+        <li>Product development from sketch to production sample</li>
+        <li>Mixed-category consolidated shipments</li>
+        <li>Export documentation, certificates of origin and freight booking</li>
+      </ul>
+      <div class="btn-row">
+        <a class="btn" href="{% url 'contact' %}">Start a conversation</a>
+      </div>
+    </div>
+  </div>
+</section>

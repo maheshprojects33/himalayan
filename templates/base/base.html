@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Handmade Paper, Pashmina, Statues & Herbals from Nepal | Himalayan Network</title>
+    <meta name="description" content="Himalayan Network manufactures and exports handmade lokta paper, pure pashmina, hand-cast statues and Himalayan herbal products from Nepal to buyers worldwide." />
+    <meta property="og:title" content="Handmade Paper, Pashmina, Statues & Herbals from Nepal | Himalayan Network" />
+    <meta property="og:description" content="Himalayan Network manufactures and exports handmade lokta paper, pure pashmina, hand-cast statues and Himalayan herbal products from Nepal to buyers worldwide." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{% static 'assets/img/hero.jpg' %}" />
+    <link rel="icon" href="{% static 'assets/img/favicon.png' %}" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+  </head>
+  <body>
+    <a class="skip" href="#main" style="position:absolute;left:-9999px">Skip to content</a>
+
+    {% include 'base/header.html' %}
+
+    <main id="main">
+      {% block content %}
+
+      {% endblock %}
+    </main>
+
+    {% include 'base/cta.html' %}
+    {% include 'base/footer.html' %}
+
+    <button class="to-top" aria-label="Back to top">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </button>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+  </body>
+</html>

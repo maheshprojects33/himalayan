@@ -1,0 +1,33 @@
+{% load static %}
+<section class="hero">
+  <div class="hero__bg">
+    <img src="{% static 'assets/img/hero.jpg' %}" alt="Nepali artisan making handmade lokta paper" />
+  </div>
+  <div class="container hero__inner">
+    <span class="eyebrow">Made in Nepal &middot; Exported Worldwide</span>
+    <h1>Himalayan craft, made by our own hands.</h1>
+    <p>We manufacture handmade lokta paper, pure pashmina, hand-cast statues and Himalayan herbal products in our own workshops across Nepal — and export them to retailers, wholesalers and brands around the world.</p>
+    <div class="btn-row">
+      <a class="btn btn--light" href="{% url 'products' %}">Explore Products</a>
+      <a class="btn btn--light" href="{% url 'contact' %}">B2B Enquiry</a>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat__num">25+</div>
+        <div class="stat__label">Years of craft</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">150+</div>
+        <div class="stat__label">Artisan partners</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">20+</div>
+        <div class="stat__label">Countries served</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">4</div>
+        <div class="stat__label">Product families</div>
+      </div>
+    </div>
+  </div>
+</section>

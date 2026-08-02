@@ -1,0 +1,33 @@
+{% load static %}
+<section class="section">
+  <div class="container split">
+    <div class="split__media reveal">
+      <img src="{% static 'assets/img/about.jpg' %}" alt="Artisans at work in our Nepal workshop" loading="lazy" />
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Who we are</span>
+      <h2>One country, four crafts, a single standard of care</h2>
+      <p class="lead">Himalayan Network is a Nepali manufacturer and exporter. Everything we ship is produced here — in our paper units, weaving houses, metal casting studios and herbal processing facility — never traded in from elsewhere.</p>
+      <ul class="ticks">
+        <li>Own production, full control over quality and lead times</li>
+        <li>Fair wages and long-term artisan relationships</li>
+        <li>Export documentation, packing and logistics handled in-house</li>
+        <li>Private label and custom development welcome</li>
+      </ul>
+      {% comment %} <div class="founder-note">
+        <blockquote>&ldquo;When you hold a sheet of our lokta paper, you are holding a hillside, a season, and a pair of hands.&rdquo;</blockquote>
+        <div class="founder-note__by">
+          <img src="{% static 'assets/img/founder.jpg' %}" alt="Surendra Shakya" loading="lazy" />
+          <div>
+            <strong>Surendra Shakya</strong>
+            <span>Chief Executive Officer</span>
+          </div>
+        </div>
+        <a class="link-arrow" href="about.html#founder">Read the CEO's message &rarr;</a> 
+      </div> {% endcomment %}
+      <div class="btn-row">
+        <a class="btn btn--ghost" href="{% url 'about' %}">More about us</a>
+      </div>
+    </div>
+  </div>
+</section>

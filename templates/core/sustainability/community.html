@@ -1,0 +1,23 @@
+{% load static %}
+
+<section class="section">
+  <div class="container split split--reverse">
+    <div class="split__media reveal">
+      <img src="{% static 'assets/img/process.jpg' %}" alt="Sun drying handmade paper" loading="lazy" />
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Community</span>
+      <h2>Craft as rural livelihood</h2>
+      <p class="lead">Most of our raw material comes from districts where cash income is scarce. Every order placed with us moves money into those hills.</p>
+      <ul class="ticks">
+        <li>Direct purchase from harvester and collector groups</li>
+        <li>Advance payment during harvest season</li>
+        <li>Equipment support for partner workshops</li>
+        <li>Scholarship support for artisan families' children</li>
+      </ul>
+      <div class="btn-row">
+        <a class="btn btn--ghost" href="{% url 'contact' %}">Partner with us</a>
+      </div>
+    </div>
+  </div>
+</section>

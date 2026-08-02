@@ -1,0 +1,104 @@
+{% load static %}
+<section class="section">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Get in touch</span>
+      <h2>Talk to our export team</h2>
+      <p class="lead">We answer every genuine B2B enquiry within two working days. Include your quantities and destination for a faster quote.</p>
+      <ul class="info-list">
+        <li>
+          <span class="ico">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11z" />
+              <circle cx="12" cy="10" r="2.6" />
+            </svg>
+          </span>
+          <div>
+            <strong>Office</strong><span>Shree Margha, Pulchowk,Lalitpur, Nepal</span>
+          </div>
+        </li>
+        <li>
+          <span class="ico">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="m3 7 9 6 9-6" />
+            </svg>
+          </span>
+          <div>
+            <strong>Email</strong><span><a href="mailto:info@himalayannetwork.com">info@himalayannetwork.com</a></span>
+          </div>
+        </li>
+        <li>
+          <span class="ico">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4z" />
+            </svg>
+          </span>
+          <div>
+            <strong>Phone / WhatsApp</strong><span><a href="tel:+97715000000">+977 1 5000000</a></span>
+          </div>
+        </li>
+        <li>
+          <span class="ico">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 7v5l3 2" />
+            </svg>
+          </span>
+          <div>
+            <strong>Office hours</strong><span>Sunday – Friday, 9:30am – 6:00pm (GMT+5:45)</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <form class="form reveal" novalidate>
+      <div class="form-success">Thank you — your enquiry has been recorded. Our export team will reply within two working days.</div>
+      <div class="grid grid--2" style="gap:0 18px">
+        <div class="field">
+          <label for="name">Full name *</label>
+          <input id="name" name="name" type="text" required placeholder="Your name" />
+          <span class="err">Please enter your name.</span>
+        </div>
+        <div class="field">
+          <label for="company">Company</label>
+          <input id="company" name="company" type="text" placeholder="Company name" />
+        </div>
+        <div class="field">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required placeholder="you@company.com" />
+          <span class="err">Please enter a valid email address.</span>
+        </div>
+        <div class="field">
+          <label for="country">Country</label>
+          <input id="country" name="country" type="text" placeholder="Destination country" />
+        </div>
+      </div>
+      <div class="field">
+        <label for="interest">Product of interest *</label>
+        <select id="interest" name="interest" required>
+          <option value="">Select a category</option>
+          <option>Handmade Paper</option>
+          <option>Pashmina</option>
+          <option>Statues</option>
+          <option>Herbal Products</option>
+          <option>Multiple categories</option>
+        </select>
+        <span class="err">Please choose a category.</span>
+      </div>
+      <div class="field">
+        <label for="message">Your enquiry *</label>
+        <textarea id="message" name="message" required placeholder="Products, quantities, target price and delivery date..."></textarea>
+        <span class="err">Please tell us a little about your requirement.</span>
+      </div>
+      <button class="btn" type="submit">Send Enquiry</button>
+      <p class="form-note">This demo form validates in the browser only. To receive messages by email, connect it to a form service (Formspree, Web3Forms) or your own backend.</p>
+    </form>
+  </div>
+
+  <div class="container">
+    <div class="map-embed reveal">
+      <iframe title="Our location in Kathmandu Valley" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=85.28%2C27.66%2C85.36%2C27.72&amp;layer=mapnik"></iframe>
+    </div>
+  </div>
+</section>
