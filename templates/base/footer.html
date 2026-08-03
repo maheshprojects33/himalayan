@@ -18,21 +18,21 @@
       <div>
         <h4>Explore</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="process.html">Our Craft</a></li>
-          <li><a href="sustainability.html">Sustainability</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
+          <li><a href="{% url 'craft' %}">Our Craft</a></li>
+          <li><a href="{% url 'sustainability' %}">Sustainability</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
       </div>
       <div>
         <h4>Products</h4>
         <ul>
-          <li><a href="products.html#paper">Handmade Paper</a></li>
-          <li><a href="products.html#pashmina">Pashmina</a></li>
-          <li><a href="products.html#statues">Statues</a></li>
-          <li><a href="products.html#herbals">Herbal Products</a></li>
-          <li><a href="contact.html">Private Label</a></li>
+          <li><a href="{% url 'products' %}">Handmade Paper</a></li>
+          <li><a href="{% url 'products' %}">Pashmina</a></li>
+          <li><a href="{% url 'products' %}">Statues</a></li>
+          <li><a href="{% url 'products' %}">Herbal Products</a></li>
+          <li><a href="{% url 'contact' %}">Private Label</a></li>
         </ul>
       </div>
       <div>
