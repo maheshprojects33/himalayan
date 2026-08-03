@@ -1,19 +1,43 @@
 {% load static %}
+
 <section class="section">
-  <div class="container split">
-    <div class="split__media reveal">
-      <img src="{% static 'assets/img/cat-statues.jpg' %}" alt="Copper statues" loading="lazy" />
+  <div class="container">
+    <div class="split">
+      <div class="split__media reveal"><img src="{% static 'assets/img/proc-statues.jpg' %}" alt="Artisan chiselling fine detail into a copper Buddha statue in a Patan workshop" loading="lazy"></div>
+      <div class="reveal">
+        <span class="eyebrow">Statues</span>
+        <h2>Lost-wax casting from Patan</h2>
+        <p class="lead">Statue making in Patan is a Newar tradition passed through families for generations, and our casting studio works the same way.</p>
+        <p>A wax model is sculpted, coated in clay, fired so the wax runs out, and molten copper or brass is poured into the cavity. The raw casting is then chiselled, polished, gilded and hand-painted — a single piece can take weeks.</p>
+        <ul class="ticks">
+          <li>Copper, brass and bronze; gold gilding on request</li>
+          <li>Buddha, Tara, Ganesh, Manjushri and custom deities</li>
+          <li>Heights from 4 inches to life-size commissions</li>
+        </ul>
+      </div>
     </div>
-    <div class="reveal">
-      <span class="eyebrow">Statues</span>
-      <h2>Lost-wax casting from Patan</h2>
-      <p class="lead">Statue making in Patan is a Newar tradition passed through families for generations, and our casting studio works the same way.</p>
-      <p>A wax model is sculpted, coated in clay, fired so the wax runs out, and molten copper or brass is poured into the cavity. The raw casting is then chiselled, polished, gilded and hand-painted — a single piece can take weeks.</p>
-      <ul class="ticks">
-        <li>Copper, brass and bronze; gold gilding on request</li>
-        <li>Buddha, Tara, Ganesh, Manjushri and custom deities</li>
-        <li>Heights from 4 inches to life-size commissions</li>
-      </ul>
+
+    <div class="craft-steps">
+      <figure class="craft-step reveal">
+        <button data-lightbox="{% static 'assets/img/proc-stat-1.jpg' %}" data-caption="Sculpting the wax model by hand">
+          <img src="{% static 'assets/img/proc-stat-1.jpg' %}" alt="Artisan sculpting a wax model of a deity figure" loading="lazy">
+        </button>
+        <figcaption><strong>01 &middot; Wax model</strong>Every statue begins as a wax figure sculpted by hand, then sealed in a clay mould and fired until the wax runs out.</figcaption>
+      </figure>
+      <figure class="craft-step reveal">
+        <button data-lightbox="{% static 'assets/img/proc-stat-2.jpg' %}" data-caption="Pouring molten copper into clay moulds">
+          <img src="{% static 'assets/img/proc-stat-2.jpg' %}" alt="Molten copper being poured into clay moulds" loading="lazy">
+        </button>
+        <figcaption><strong>02 &middot; Casting</strong>Molten copper or brass is poured into the empty cavity. The mould is broken away — each one is used only once.</figcaption>
+      </figure>
+      <figure class="craft-step reveal">
+        <button data-lightbox="{% static 'assets/img/proc-stat-3.jpg' %}" data-caption="Hand-painting the gilded face of a Tara statue">
+          <img src="{% static 'assets/img/proc-stat-3.jpg' %}" alt="Artisan hand-painting the gold face of a Tara statue" loading="lazy">
+        </button>
+        <figcaption><strong>03 &middot; Finishing</strong>The raw casting is chiselled, polished, gold-gilded and the face hand-painted with a fine brush.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
+
+

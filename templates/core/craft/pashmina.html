@@ -1,19 +1,44 @@
 {% load static %}
+
 <section class="section section--tint">
-  <div class="container split split--reverse">
-    <div class="split__media reveal">
-      <img src="{% static 'assets/img/cat-pashmina.jpg' %}" alt="Pashmina shawls" loading="lazy" />
+  <div class="container">
+    <div class="split split--reverse">
+      <div class="split__media reveal"><img src="{% static 'assets/img/proc-pashmina.jpg' %}" alt="Artisan weaving a pashmina shawl on a traditional wooden handloom" loading="lazy"></div>
+      <div class="reveal">
+        <span class="eyebrow">Pashmina</span>
+        <h2>Chyangra fleece, hand-loomed</h2>
+        <p class="lead">Our pashmina uses fine undercoat fleece from the Chyangra mountain goat of the high Himalaya, combed by hand each spring.</p>
+        <p>The fibre is de-haired, spun and dyed, then woven on handlooms in the Kathmandu Valley. Finishing — washing, brushing, fringing and pressing — is done by hand, which is why a real pashmina drapes the way it does.</p>
+        <ul class="ticks">
+          <li>100% cashmere and cashmere-silk blends</li>
+          <li>Custom colours matched to Pantone references</li>
+          <li>Shawls, stoles, scarves and wraps in your sizes</li>
+        </ul>
+      </div>
     </div>
-    <div class="reveal">
-      <span class="eyebrow">Pashmina</span>
-      <h2>Chyangra fleece, hand-loomed</h2>
-      <p class="lead">Our pashmina uses fine undercoat fleece from the Chyangra mountain goat of the high Himalaya, combed by hand each spring.</p>
-      <p>The fibre is de-haired, spun and dyed, then woven on handlooms in the Kathmandu Valley. Finishing — washing, brushing, fringing and pressing — is done by hand, which is why a real pashmina drapes the way it does.</p>
-      <ul class="ticks">
-        <li>100% cashmere and cashmere-silk blends</li>
-        <li>Custom colours matched to Pantone references</li>
-        <li>Shawls, stoles, scarves and wraps in your sizes</li>
-      </ul>
+
+    <div class="craft-steps">
+      <figure class="craft-step reveal">
+        <button data-lightbox="{% static 'assets/img/proc-fleece.jpg' %}" data-caption="Combing and de-hairing raw Chyangra fleece">
+          <img src="{% static 'assets/img/proc-fleece.jpg' %}" alt="Hands combing raw Chyangra cashmere fleece" loading="lazy">
+        </button>
+        <figcaption><strong>01 &middot; Combing</strong>Raw fleece is combed from the goat's undercoat each spring, then de-haired by hand until only the finest fibre remains.</figcaption>
+      </figure>
+      <figure class="craft-step reveal">
+        <button data-lightbox="{% static 'assets/img/proc-spinning.jpg' %}" data-caption="Hand-spinning cashmere fibre into yarn">
+          <img src="{% static 'assets/img/proc-spinning.jpg' %}" alt="Woman hand-spinning cashmere fibre into yarn" loading="lazy">
+        </button>
+        <figcaption><strong>02 &middot; Spinning &amp; dyeing</strong>The fibre is spun into a fine yarn and dyed in small batches to your colour reference.</figcaption>
+      </figure>
+      <figure class="craft-step reveal">
+        <button data-lightbox="{% static 'assets/img/proc-finishing.jpg' %}" data-caption="Hand-finishing and fringing woven pashmina">
+          <img src="{% static 'assets/img/proc-finishing.jpg' %}" alt="Artisan hand-knotting fringes on a finished pashmina shawl" loading="lazy">
+        </button>
+        <figcaption><strong>03 &middot; Weaving &amp; finishing</strong>Woven on wooden handlooms, then washed, brushed, fringed and pressed entirely by hand.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
+
+
+

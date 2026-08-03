@@ -1,19 +1,45 @@
 {% load static %}
+
 <section class="section">
-  <div class="container split">
-    <div class="split__media reveal">
-      <img src="{% static 'assets/img/process.jpg' %}" alt="Paper drying in the sun" loading="lazy" />
+  <div class="container">
+    <div class="split">
+      <div class="split__media reveal"><img src="{% static 'assets/img/process.jpg' %}" alt="Handmade lokta paper drying on wooden frames in the sun" loading="lazy"></div>
+      <div class="reveal">
+        <span class="eyebrow">Handmade paper</span>
+        <h2>Lokta bark to finished sheet</h2>
+        <p class="lead">Lokta is a Himalayan shrub that regenerates from its own rootstock within a few years of harvesting — which makes our paper genuinely tree-free.</p>
+        <p>The bark is cooked, washed and beaten to a pulp, then poured onto a fine cotton screen floated in water. Each sheet is lifted, drained and dried in the sun on wooden frames, giving lokta paper its characteristic fibrous strength and soft texture.</p>
+        <ul class="ticks">
+          <li>Tree-free, naturally acid-free and long lasting</li>
+          <li>20–120 gsm, natural, dyed, printed or marbled</li>
+          <li>Converted into journals, wrap, bags, boxes and stationery</li>
+        </ul>
+      </div>
     </div>
-    <div class="reveal">
-      <span class="eyebrow">Handmade paper</span>
-      <h2>Lokta bark to finished sheet</h2>
-      <p class="lead">Lokta is a Himalayan shrub that regenerates from its own rootstock within a few years of harvesting — which makes our paper genuinely tree-free.</p>
-      <p>The bark is cooked, washed and beaten to a pulp, then poured onto a fine cotton screen floated in water. Each sheet is lifted, drained and dried in the sun on wooden frames, giving lokta paper its characteristic fibrous strength and soft texture.</p>
-      <ul class="ticks">
-        <li>Tree-free, naturally acid-free and long lasting</li>
-        <li>20–120 gsm, natural, dyed, printed or marbled</li>
-        <li>Converted into journals, wrap, bags, boxes and stationery</li>
-      </ul>
+
+    <div class="craft-steps">
+      <figure class="craft-step reveal">
+        <button data-lightbox="{% static 'assets/img/proc-paper-1.jpg' %}" data-caption="Harvesting and cooking lokta bark">
+          <img src="{% static 'assets/img/proc-paper-1.jpg' %}" alt="Lokta bark being cooked over a wood fire" loading="lazy">
+        </button>
+        <figcaption><strong>01 &middot; Harvest &amp; cook</strong>Bark is cut above the root so the shrub regrows, then cooked and washed until the fibres separate.</figcaption>
+      </figure>
+      <figure class="craft-step reveal">
+        <button data-lightbox="{% static 'assets/img/proc-paper-2.jpg' %}" data-caption="Casting pulp onto a cotton screen">
+          <img src="{% static 'assets/img/proc-paper-2.jpg' %}" alt="Hands spreading lokta pulp across a cotton screen" loading="lazy">
+        </button>
+        <figcaption><strong>02 &middot; Cast &amp; dry</strong>Pulp is poured onto a floating screen, spread by hand, then sun-dried sheet by sheet on wooden frames.</figcaption>
+      </figure>
+      <figure class="craft-step reveal">
+        <button data-lightbox="{% static 'assets/img/proc-paper-3.jpg' %}" data-caption="Hand-binding lokta paper journals">
+          <img src="{% static 'assets/img/proc-paper-3.jpg' %}" alt="Artisan hand-binding a lokta paper journal" loading="lazy">
+        </button>
+        <figcaption><strong>03 &middot; Print &amp; convert</strong>Sheets are screen-printed or marbled, then cut, folded and hand-bound into finished products.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
+
+
+
+

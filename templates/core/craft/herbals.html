@@ -1,19 +1,43 @@
 {% load static %}
+
 <section class="section section--tint">
-  <div class="container split split--reverse">
-    <div class="split__media reveal">
-      <img src="{% static 'assets/img/cat-herbals.jpg' %}" alt="Herbal products" loading="lazy" />
+  <div class="container">
+    <div class="split split--reverse">
+      <div class="split__media reveal"><img src="{% static 'assets/img/proc-herbals.jpg' %}" alt="Freshly harvested herbs being sorted and spread on drying trays" loading="lazy"></div>
+      <div class="reveal">
+        <span class="eyebrow">Herbals</span>
+        <h2>Highland herbs, small-batch processing</h2>
+        <p class="lead">Nepal's altitude range grows an unusual variety of medicinal and aromatic plants, from tulsi and lemongrass in the mid-hills to juniper and rhododendron higher up.</p>
+        <p>We work with collector groups and organic farms, then dry, distil and blend in small batches at our processing unit so aroma and potency survive the journey to your market.</p>
+        <ul class="ticks">
+          <li>Herbal teas, essential oils, balms, incense and soaps</li>
+          <li>Bulk supply or retail-ready packaging</li>
+          <li>Lab test reports and documentation available</li>
+        </ul>
+      </div>
     </div>
-    <div class="reveal">
-      <span class="eyebrow">Herbals</span>
-      <h2>Highland herbs, small-batch processing</h2>
-      <p class="lead">Nepal's altitude range grows an unusual variety of medicinal and aromatic plants, from tulsi and lemongrass in the mid-hills to juniper and rhododendron higher up.</p>
-      <p>We work with collector groups and organic farms, then dry, distil and blend in small batches at our processing unit so aroma and potency survive the journey to your market.</p>
-      <ul class="ticks">
-        <li>Herbal teas, essential oils, balms, incense and soaps</li>
-        <li>Bulk supply or retail-ready packaging</li>
-        <li>Lab test reports and documentation available</li>
-      </ul>
+
+    <div class="craft-steps">
+      <figure class="craft-step reveal">
+        <button data-lightbox="{% static 'assets/img/proc-herb-1.jpg' %}" data-caption="Hand-harvesting herbs on a Himalayan hillside">
+          <img src="{% static 'assets/img/proc-herb-1.jpg' %}" alt="Woman hand-harvesting herbs into a woven basket on a hillside" loading="lazy">
+        </button>
+        <figcaption><strong>01 &middot; Harvest</strong>Herbs are wild-crafted or farmed organically in the hills and picked by hand at the right point in the season.</figcaption>
+      </figure>
+      <figure class="craft-step reveal">
+        <button data-lightbox="{% static 'assets/img/proc-herb-2.jpg' %}" data-caption="Steam distillation of essential oils">
+          <img src="{% static 'assets/img/proc-herb-2.jpg' %}" alt="Copper steam still extracting essential oil from herbs" loading="lazy">
+        </button>
+        <figcaption><strong>02 &middot; Dry &amp; distil</strong>Leaves are shade-dried to protect their oils, and aromatic crops are steam-distilled in small copper stills.</figcaption>
+      </figure>
+      <figure class="craft-step reveal">
+        <button data-lightbox="{% static 'assets/img/proc-herb-5.jpg' %}" data-caption="Blending and packing herbal products">
+          <img src="{% static 'assets/img/proc-herb-5.jpg' %}" alt="Sorting and blending dried herbs before packing" loading="lazy">
+        </button>
+        <figcaption><strong>03 &middot; Blend &amp; pack</strong>Batches are blended to recipe, tested, then packed in bulk or in your own retail packaging.</figcaption>
+      </figure>
     </div>
   </div>
 </section>
+
+

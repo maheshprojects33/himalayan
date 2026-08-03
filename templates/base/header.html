@@ -13,11 +13,11 @@
     </button>
     <nav class="nav" id="site-nav">
       <ul class="nav__list">
-        <li><a href="{% url 'home' %}" class="active">Home</a> </li>
-        <li><a href="{% url 'about' %}">About</a></li>
-        <li><a href="{% url 'products' %}">Products</a></li>
-        <li><a href="{% url 'craft' %}">Our Craft</a></li>
-        <li><a href="{% url 'sustainability' %}">Sustainability</a></li>
+        <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a> </li>
+        <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a></li>
+        <li><a href="{% url 'products' %}" class="{% if request.resolver_match.url_name == 'products' %}active{% endif %}">Products</a></li>
+        <li><a href="{% url 'craft' %}" class="{% if request.resolver_match.url_name == 'craft' %}active{% endif %}">Our Craft</a></li>
+        <li><a href="{% url 'sustainability' %}" class="{% if request.resolver_match.url_name == 'sustainability' %}active{% endif %}">Sustainability</a></li>
         <li class="nav__cta"><a class="btn" href="{% url 'contact' %}">Enquire Now</a></li>
       </ul>
     </nav>
