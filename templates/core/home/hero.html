@@ -1,7 +1,16 @@
 {% load static %}
 <section class="hero">
-  <div class="hero__bg">
-    <img src="{% static 'assets/img/hero.jpg' %}" alt="Nepali artisan making handmade lokta paper" />
+  <div class="hero__bg" data-hero-slider>
+    <div class="hero__slide is-active"><img src="{% static 'assets/img/hero-paper.jpg' %}" alt="Nepali artisan making handmade lokta paper" fetchpriority="high"></div>
+    <div class="hero__slide"><img src="{% static 'assets/img/hero-pashmina.jpg' %}" alt="Artisan weaving pashmina on a traditional handloom" loading="lazy"></div>
+    <div class="hero__slide"><img src="{% static 'assets/img/hero-statues.jpg' %}" alt="Artisan hand-finishing a copper Buddha statue in Patan" loading="lazy"></div>
+    <div class="hero__slide"><img src="{% static 'assets/img/hero-herbals.jpg' %}" alt="Himalayan herbs drying on a terraced hillside" loading="lazy"></div>
+  </div>
+  <div class="hero__dots" role="tablist" aria-label="Hero slideshow">
+    <button class="hero__dot is-active" role="tab" aria-selected="true" aria-label="Handmade paper"></button>
+    <button class="hero__dot" role="tab" aria-selected="false" aria-label="Pashmina"></button>
+    <button class="hero__dot" role="tab" aria-selected="false" aria-label="Statues"></button>
+    <button class="hero__dot" role="tab" aria-selected="false" aria-label="Herbals"></button>
   </div>
   <div class="container hero__inner">
     <span class="eyebrow">Made in Nepal &middot; Exported Worldwide</span>
@@ -31,3 +40,7 @@
     </div>
   </div>
 </section>
+
+
+
+

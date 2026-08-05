@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Himalayan Foundation — main.js
+   Himalayan Network — main.js
    Vanilla JS: nav, scroll effects, filters, accordion, lightbox, form, year
    ========================================================================== */
 (function () {
@@ -7,6 +7,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     initNav();
+    initHeroSlider();
     initHeaderScroll();
     initReveal();
     initFilters();
@@ -45,6 +46,63 @@
 
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') close();
+    });
+  }
+
+  /* ---------------- Hero background slideshow ---------------- */
+  function initHeroSlider() {
+    var wrap = document.querySelector('[data-hero-slider]');
+    if (!wrap) return;
+
+    var slides = wrap.querySelectorAll('.hero__slide');
+    var dots = document.querySelectorAll('.hero__dot');
+    if (slides.length < 2) return;
+
+    var index = 0;
+    var timer = null;
+    var DELAY = 6000;
+
+    function show(next) {
+      if (next === index) return;
+      slides[index].classList.remove('is-active');
+      slides[next].classList.add('is-active');
+      if (dots.length) {
+        dots[index].classList.remove('is-active');
+        dots[index].setAttribute('aria-selected', 'false');
+        dots[next].classList.add('is-active');
+        dots[next].setAttribute('aria-selected', 'true');
+      }
+      index = next;
+    }
+
+    function advance() {
+      show((index + 1) % slides.length);
+    }
+
+    function start() {
+      stop();
+      timer = setInterval(advance, DELAY);
+    }
+    function stop() {
+      if (timer) { clearInterval(timer); timer = null; }
+    }
+
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () {
+        show(i);
+        start(); // restart the cycle after a manual pick
+      });
+    });
+
+    // Pause while the tab is hidden so slides don't pile up
+    document.addEventListener('visibilitychange', function () {
+      document.hidden ? stop() : start();
+    });
+
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (!reduce.matches) start();
+    reduce.addEventListener && reduce.addEventListener('change', function (e) {
+      e.matches ? stop() : start();
     });
   }
 
