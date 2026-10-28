@@ -305,3 +305,167 @@
     });
   }
 })();
+
+// For Pagination in Product Catalogue
+
+document.addEventListener("DOMContentLoaded", function () {
+  const section = document.getElementById("product-catalogue");
+  if (!section) return;
+
+  const grid = section.querySelector(".grid--4");
+  const cards = Array.from(grid.querySelectorAll(".product-card"));
+  const filterButtons = Array.from(section.querySelectorAll(".filter-btn"));
+  const pagination = section.querySelector(".product-pagination");
+
+  const ROWS_PER_PAGE = 2;
+
+  let currentFilter = "all";
+  let currentPage = 1;
+
+  // Get the number of actual grid columns at the current screen width.
+  function getColumnCount() {
+    const columns = window
+      .getComputedStyle(grid)
+      .gridTemplateColumns
+      .trim()
+      .split(/\s+/)
+      .filter(column => column !== "0px");
+
+    return Math.max(1, columns.length);
+  }
+
+  function getFilteredCards() {
+    return cards.filter(card => {
+      return currentFilter === "all" ||
+        card.dataset.category === currentFilter;
+    });
+  }
+
+  function makeButton(label, page, options = {}) {
+    const button = document.createElement("button");
+
+    button.type = "button";
+    button.textContent = label;
+    button.dataset.page = page;
+
+    if (options.ariaLabel) {
+      button.setAttribute("aria-label", options.ariaLabel);
+    }
+
+    if (options.current) {
+      button.setAttribute("aria-current", "page");
+    }
+
+    button.disabled = Boolean(options.disabled);
+
+    return button;
+  }
+
+  function render() {
+    const filteredCards = getFilteredCards();
+    const itemsPerPage = getColumnCount() * ROWS_PER_PAGE;
+    const totalPages = Math.max(
+      1,
+      Math.ceil(filteredCards.length / itemsPerPage)
+    );
+
+    // Keep the current page valid after filtering or resizing.
+    currentPage = Math.min(currentPage, totalPages);
+
+    const start = (currentPage - 1) * itemsPerPage;
+    const visibleCards = new Set(
+      filteredCards.slice(start, start + itemsPerPage)
+    );
+
+    cards.forEach(card => {
+      card.hidden = !visibleCards.has(card);
+    });
+
+    pagination.replaceChildren();
+    pagination.hidden = totalPages <= 1;
+
+    if (totalPages <= 1) return;
+
+    // First and previous page.
+    pagination.appendChild(
+      makeButton("«", 1, {
+        ariaLabel: "First page",
+        disabled: currentPage === 1
+      })
+    );
+
+    pagination.appendChild(
+      makeButton("‹", currentPage - 1, {
+        ariaLabel: "Previous page",
+        disabled: currentPage === 1
+      })
+    );
+
+    // Numbered pages.
+    for (let page = 1; page <= totalPages; page++) {
+      pagination.appendChild(
+        makeButton(String(page), page, {
+          ariaLabel: `Page ${page}`,
+          current: page === currentPage
+        })
+      );
+    }
+
+    // Next and last page.
+    pagination.appendChild(
+      makeButton("›", currentPage + 1, {
+        ariaLabel: "Next page",
+        disabled: currentPage === totalPages
+      })
+    );
+
+    pagination.appendChild(
+      makeButton("»", totalPages, {
+        ariaLabel: "Last page",
+        disabled: currentPage === totalPages
+      })
+    );
+  }
+
+  filterButtons.forEach(button => {
+    button.setAttribute(
+      "aria-pressed",
+      String(button.dataset.filter === currentFilter)
+    );
+
+    button.addEventListener("click", function () {
+      currentFilter = button.dataset.filter;
+      currentPage = 1;
+
+      filterButtons.forEach(filterButton => {
+        const active = filterButton === button;
+        filterButton.classList.toggle("active", active);
+        filterButton.setAttribute("aria-pressed", String(active));
+      });
+
+      render();
+    });
+  });
+
+  pagination.addEventListener("click", function (event) {
+    const button = event.target.closest("button[data-page]");
+    if (!button || button.disabled) return;
+
+    currentPage = Number(button.dataset.page);
+    render();
+
+    // Keep keyboard focus in the pagination after its buttons are rebuilt.
+    const currentButton = pagination.querySelector(
+      'button[aria-current="page"]'
+    );
+    if (currentButton) currentButton.focus();
+  });
+
+  let resizeTimer;
+  window.addEventListener("resize", function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(render, 150);
+  });
+
+  render();
+});

@@ -1,10 +1,62 @@
 {% load static %}
 <section class="hero">
+   <div class="hero__bg" data-hero-slider>
+    {% for hero_image in hero_images %}
+      <div class="hero__slide {% if forloop.first %}is-active{% endif %}">
+        <img src="{{ hero_image.image.url }}" alt="{{ hero_image.name }}" {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %} />
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="hero__dots" role="tablist" aria-label="Hero slideshow">
+    {% for hero_image in hero_images %}
+      <button class="hero__dot {% if forloop.first %}is-active{% endif %}" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" aria-label="{{ hero_image.name }}"></button>
+    {% endfor %}
+  </div>
+
+  
+  <div class="container hero__inner">
+    <span class="eyebrow">Made in Nepal &middot; Exported Worldwide</span>
+    <h1>Himalayan craft, made by our own hands.</h1>
+    <p>We manufacture handmade lokta paper, pure pashmina, hand-cast statues and Himalayan herbal products in our own workshops across Nepal — and export them to retailers, wholesalers and brands around the world.</p>
+    <div class="btn-row">
+      <a class="btn btn--light" href="{% url 'products' %}">Explore Products</a>
+      <a class="btn btn--light" href="{% url 'contact' %}">B2B Enquiry</a>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat__num">25+</div>
+        <div class="stat__label">Years of craft</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">150+</div>
+        <div class="stat__label">Artisan partners</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">20+</div>
+        <div class="stat__label">Countries served</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">4</div>
+        <div class="stat__label">Product families</div>
+      </div>
+    </div>
+  </div>
+</section>
+{% comment %} <section class="hero">
   <div class="hero__bg" data-hero-slider>
-    <div class="hero__slide is-active"><img src="{% static 'assets/img/hero-paper.jpg' %}" alt="Nepali artisan making handmade lokta paper" fetchpriority="high"></div>
-    <div class="hero__slide"><img src="{% static 'assets/img/hero-pashmina.jpg' %}" alt="Artisan weaving pashmina on a traditional handloom" loading="lazy"></div>
-    <div class="hero__slide"><img src="{% static 'assets/img/hero-statues.jpg' %}" alt="Artisan hand-finishing a copper Buddha statue in Patan" loading="lazy"></div>
-    <div class="hero__slide"><img src="{% static 'assets/img/hero-herbals.jpg' %}" alt="Himalayan herbs drying on a terraced hillside" loading="lazy"></div>
+    <div class="hero__slide is-active">
+      <img src="{% static 'assets/img/hero-paper.jpg' %}" alt="Nepali artisan making handmade lokta paper" fetchpriority="high" />
+    </div>
+    <div class="hero__slide">
+      <img src="{% static 'assets/img/hero-pashmina.jpg' %}" alt="Artisan weaving pashmina on a traditional handloom" loading="lazy" />
+    </div>
+    <div class="hero__slide">
+      <img src="{% static 'assets/img/hero-statues.jpg' %}" alt="Artisan hand-finishing a copper Buddha statue in Patan" loading="lazy" />
+    </div>
+    <div class="hero__slide">
+      <img src="{% static 'assets/img/hero-herbals.jpg' %}" alt="Himalayan herbs drying on a terraced hillside" loading="lazy" />
+    </div>
   </div>
   <div class="hero__dots" role="tablist" aria-label="Hero slideshow">
     <button class="hero__dot is-active" role="tab" aria-selected="true" aria-label="Handmade paper"></button>
@@ -39,8 +91,4 @@
       </div>
     </div>
   </div>
-</section>
-
-
-
-
+</section> {% endcomment %}

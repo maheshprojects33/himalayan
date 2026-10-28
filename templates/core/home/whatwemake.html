@@ -7,38 +7,16 @@
       <p class="lead">Four distinct crafts, each rooted in a Nepali tradition and produced to consistent export quality.</p>
     </div>
     <div class="grid grid--4">
+      {% for item in what_we_make %}
       <article class="card reveal">
-        <div class="card__media"><img src="{% static 'assets/img/cat-paper.jpg' %}" alt="Handmade Lokta Paper" loading="lazy"></div>
+        <div class="card__media"><img src="{{ item.image.url }}" alt="{{ item.image_alt }}" loading="lazy"></div>
         <div class="card__body">
-          <h3>Handmade Lokta Paper</h3>
-          <p>Tree-free paper made from Himalayan lokta bark — sheets, journals, gift wrap and packaging.</p>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
           <a class="link-arrow" href="{% url 'products' %}">View range &rarr;</a>
         </div>
       </article>
-      <article class="card reveal">
-        <div class="card__media"><img src="{% static 'assets/img/cat-pashmina.jpg' %}" alt="Pure Pashmina" loading="lazy"></div>
-        <div class="card__body">
-          <h3>Pure Pashmina</h3>
-          <p>Handwoven Chyangra cashmere shawls, stoles and scarves, dyed to your palette.</p>
-          <a class="link-arrow" href="{% url 'products' %}">View range &rarr;</a>
-        </div>
-      </article>
-      <article class="card reveal">
-        <div class="card__media"><img src="{% static 'assets/img/cat-statues.jpg' %}" alt="Statues &amp; Metal Craft" loading="lazy"></div>
-        <div class="card__body">
-          <h3>Statues &amp; Metal Craft</h3>
-          <p>Lost-wax cast copper and brass statues, finished and gilded by Patan artisans.</p>
-          <a class="link-arrow" href="{% url 'products' %}">View range &rarr;</a>
-        </div>
-      </article>
-      <article class="card reveal">
-        <div class="card__media"><img src="{% static 'assets/img/cat-herbals.jpg' %}" alt="Himalayan Herbals" loading="lazy"></div>
-        <div class="card__body">
-          <h3>Himalayan Herbals</h3>
-          <p>Herbal teas, essential oils, balms, incense and soaps from Nepali highland farms.</p>
-          <a class="link-arrow" href="{% url 'products' %}">View range &rarr;</a>
-        </div>
-      </article>
+      {% endfor %}
     </div>
     <div class="btn-row" style="justify-content:center">
       <a class="btn" href="{% url 'products' %}">View all products</a>

@@ -1,12 +1,27 @@
-from django.shortcuts import render
-from django.views.generic import TemplateView, CreateView
-
+from django.views.generic import TemplateView, ListView
+from core.models import *
 # Create your views here.
-class HomeView(TemplateView):
+class HomeView(ListView):
+    model = HeroImageSlider
     template_name = 'core/homepage.html'
 
-class AboutView(TemplateView):
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["hero_images"] = HeroImageSlider.objects.all()
+        context["who_we_are"] = WhoWeAre.objects.last()
+        context["what_we_make"] = WhatWeMake.objects.all()
+        return context
+
+class AboutView(ListView):
+    model = AboutBanner
     template_name = 'core/about.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["about_banner"] = AboutBanner.objects.last()
+        context["message"] = MessageFromCEO.objects.last()
+        return context
+    
 
 class CraftView(TemplateView):
     template_name = 'core/craft.html'

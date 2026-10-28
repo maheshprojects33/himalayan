@@ -2,7 +2,7 @@
 <section class="section">
   <div class="container split">
     <div class="split__media reveal">
-      <img src="{% static 'assets/img/about.jpg' %}" alt="Artisans at work in our Nepal workshop" loading="lazy" />
+      <img src="{{ who_we_are.image.url }}" alt="{{ who_we_are.image_alt }}" loading="lazy" />
     </div>
     <div class="reveal">
       <span class="eyebrow">Who we are</span>
@@ -14,17 +14,7 @@
         <li>Export documentation, packing and logistics handled in-house</li>
         <li>Private label and custom development welcome</li>
       </ul>
-      {% comment %} <div class="founder-note">
-        <blockquote>&ldquo;When you hold a sheet of our lokta paper, you are holding a hillside, a season, and a pair of hands.&rdquo;</blockquote>
-        <div class="founder-note__by">
-          <img src="{% static 'assets/img/founder.jpg' %}" alt="Surendra Shakya" loading="lazy" />
-          <div>
-            <strong>Surendra Shakya</strong>
-            <span>Chief Executive Officer</span>
-          </div>
-        </div>
-        <a class="link-arrow" href="about.html#founder">Read the CEO's message &rarr;</a> 
-      </div> {% endcomment %}
+      
       <div class="btn-row">
         <a class="btn btn--ghost" href="{% url 'about' %}">More about us</a>
       </div>

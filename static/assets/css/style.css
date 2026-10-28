@@ -1551,3 +1551,50 @@ p {
     transform: none
   }
 }
+
+/* For Product Pagination */
+#product-catalogue .product-card[hidden],
+#product-catalogue .product-pagination[hidden] {
+  display: none !important;
+}
+
+.product-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.product-pagination button {
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #c5cdc4;
+  border-radius: 4px;
+  background: transparent;
+  color: #2d4438;
+  font: inherit;
+  cursor: pointer;
+}
+
+.product-pagination button:hover:not(:disabled) {
+  background: #e6ece6;
+}
+
+.product-pagination button[aria-current="page"] {
+  border-color: #2d4438;
+  background: #2d4438;
+  color: #fff;
+}
+
+.product-pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.product-pagination button:focus-visible {
+  outline: 2px solid #2d4438;
+  outline-offset: 3px;
+}
