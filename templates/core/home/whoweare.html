@@ -2,17 +2,16 @@
 <section class="section">
   <div class="container split">
     <div class="split__media reveal">
-      <img src="{{ who_we_are.image.url }}" alt="{{ who_we_are.image_alt }}" loading="lazy" />
+      <img src="{{ who_we_are.image.url }}" alt="Who We Are" loading="lazy" />
     </div>
     <div class="reveal">
       <span class="eyebrow">Who we are</span>
-      <h2>One country, four crafts, a single standard of care</h2>
-      <p class="lead">Himalayan Network is a Nepali manufacturer and exporter. Everything we ship is produced here — in our paper units, weaving houses, metal casting studios and herbal processing facility — never traded in from elsewhere.</p>
+      <h2>{{ who_we_are.title }}</h2>
+      <p class="lead">{{ who_we_are.description }}</p>
       <ul class="ticks">
-        <li>Own production, full control over quality and lead times</li>
-        <li>Fair wages and long-term artisan relationships</li>
-        <li>Export documentation, packing and logistics handled in-house</li>
-        <li>Private label and custom development welcome</li>
+        {% for point in who_we_are.points_list %}
+          <li>{{ point }}</li>
+        {% endfor %}
       </ul>
       
       <div class="btn-row">

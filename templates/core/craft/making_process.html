@@ -1,0 +1,47 @@
+{% load static %}
+
+{% for process in processes %}
+<section class="section{% if forloop.counter|divisibleby:2 %} section--tint{% endif %}">
+  <div class="container">
+    <div class="split">
+      <div class="split__media reveal"><img src="{{ process.title_image.url }}" alt="{{ process.title }}" loading="lazy"></div>
+      <div class="reveal">
+        <span class="eyebrow">{{ process.craft }}</span>
+        <h2>{{ process.title }}</h2>
+        <p class="lead">{{ process.note }}</p>
+        <p>{{ process.description }}</p>
+        <ul class="ticks">
+          {% for point in process.points_list %}
+            <li>{{ point }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="craft-steps">
+      <figure class="craft-step reveal">
+        <button data-lightbox="{{ process.process_image_a.url }}" data-caption="{{ process.a_title }}">
+          <img src="{{ process.process_image_a.url }}" alt="{{ process.a_title }}" loading="lazy">
+        </button>
+        <figcaption><strong>01 &middot; {{ process.a_title }}</strong>{{ process.a_process }}</figcaption>
+      </figure>
+      <figure class="craft-step reveal">
+        <button data-lightbox="{{ process.process_image_b.url }}" data-caption="{{ process.b_title }}">
+          <img src="{{ process.process_image_b.url }}" alt="{{ process.b_title }}" loading="lazy">
+        </button>
+        <figcaption><strong>02 &middot; {{ process.b_title }}</strong>{{ process.b_process }}</figcaption>
+      </figure>
+      <figure class="craft-step reveal">
+        <button data-lightbox="{{ process.process_image_c.url }}" data-caption="{{ process.c_title }}">
+          <img src="{{ process.process_image_c.url }}" alt="{{ process.c_title }}" loading="lazy">
+        </button>
+          
+        <figcaption><strong>03 &middot; {{ process.c_title }}</strong>{{ process.c_process }}</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+
+
